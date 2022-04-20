@@ -43,9 +43,12 @@ public class Submarine {
 		while(count < size);
 	}
 	
-	// TODO
 	private int[] getRandomElement(int size) {
-		return null;
+		Random random = new Random();
+		int i = random.nextInt(size);
+		int j = random.nextInt(size);
+		
+		return new int[] {i,j};
 	}
 	
 	// TODO
