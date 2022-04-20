@@ -1,4 +1,4 @@
-package SubmarineGame;
+package Submarine.Runner;
 
 public class Runner {
 
