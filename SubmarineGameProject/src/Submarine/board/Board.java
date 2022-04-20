@@ -1,19 +1,34 @@
 package Submarine.board;
 
+import Submarine.Submarine.Submarine;
+
 public class Board {
 	//fields
 	private char[][] userBoard;
 	private char[][] subBoard;
+	private Submarine[] submarines;
 	
 	
 	public Board() {
+		initSubBoard(this.subBoard);
+		initUserBoard(this.userBoard);
+		initSubmarines( this.submarines);
+		
+		
+	}
+	
+
+	public void initSubBoard(char[][] subBoard) {
 		subBoard=new char[10][20];
 		for (int i = 0; i < subBoard.length; i++) {
 			for (int j = 0; j < subBoard.length; j++) {
 				subBoard[i][j] =' ';
 			}
 		}
-		
+	}
+	
+	
+	public void initUserBoard(char[][] userBoard) {
 		userBoard=new char[12][22];
 		for (int i = 0; i < userBoard.length; i++) {
 			for (int j = 0; j < userBoard.length; j++) {
@@ -24,20 +39,14 @@ public class Board {
 			}
 		}
 		
-	
-		
-		
-		
-		
-		
-		
 	}
 	
 	
-	
-	
-	
-	
+	public void initSubmarines( Submarine[] submarines) {
+		for (int i = 0; i < submarines.length; i++) {
+			submarines[i]=new Submarine();
+		}
+	}
 	
 	
 	
