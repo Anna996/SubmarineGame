@@ -1,5 +1,7 @@
 package Submarine.board;
 
+import java.util.Arrays;
+
 import Submarine.Submarine.Submarine;
 
 public class Board {
@@ -38,14 +40,21 @@ public class Board {
 					userBoard[i][j] =' ';
 			}
 		}
-		
 	}
 	
 	
 	public void initSubmarines( Submarine[] submarines) {
+		submarines=new Submarine[5];
 		for (int i = 0; i < submarines.length; i++) {
 			submarines[i]=new Submarine();
 		}
+	}
+
+
+	@Override
+	public String toString() {
+		return "Board [userBoard=" + Arrays.toString(userBoard) + ", subBoard=" + Arrays.toString(subBoard)
+				+ ", submarines=" + Arrays.toString(submarines) + "]";
 	}
 	
 	
