@@ -23,7 +23,6 @@ public class Submarine {
 		pattern = new char[size][size];
 	}
 
-	// TODO Logic
 	private void createPattern() {
 		if (size == 1) {
 			pattern[0][0] = CHAR;
@@ -31,9 +30,17 @@ public class Submarine {
 		}
 		
 		int[] randomElement = getRandomElement(size);
-		pattern[randomElement[0]][randomElement[1]] = CHAR;
-		int[][] neighbors = getNeighbors(randomElement);
+		int count = 0, idx;
+		Random random = new Random();
 		
+		do {
+			pattern[randomElement[0]][randomElement[1]] = CHAR;
+			int[][] neighbors = getNeighbors(randomElement);
+			idx = random.nextInt(neighbors.length);
+			randomElement = neighbors[idx];
+			count++;
+		}
+		while(count < size);
 	}
 	
 	// TODO
