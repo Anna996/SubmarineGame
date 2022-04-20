@@ -7,6 +7,10 @@ public class Submarine {
 
 	private char[][] pattern;
 	public static final char CHAR = '*' ;
+	
+	public Submarine() {
+		this.createRandom(4);
+	}
 
 	public void createRandom(int maxSize) {
 		Random random = new Random();
