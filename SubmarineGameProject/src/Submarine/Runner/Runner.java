@@ -7,6 +7,7 @@ public class Runner {
 	public static void main(String[] args) {
 		
 		Board b=new Board();
-		System.out.println(b);
+//		b.printBoard(b.getSubBoard());
+		b.printBoard(b.getUserBoard());
 	}
 }
