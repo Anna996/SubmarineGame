@@ -1,4 +1,4 @@
-package SubmarineGame.Submarine;
+package Submarine.Submarine;
 
 public class Submarine {
 
