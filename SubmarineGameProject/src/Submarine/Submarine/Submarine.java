@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Submarine {
 	private int size;
+
 	private char[][] pattern;
 	public static final char CHAR = '*' ;
 
